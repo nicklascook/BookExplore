@@ -1,0 +1,150 @@
+$firstRowColor: rgb(33, 150, 243);
+$secondRowColor: rgb(63, 81, 181);
+$thirdRowColor: rgb(103, 58, 183);
+
+@import "mixins";
+@import "fonts";
+
+body{
+    font-family: 'Bitter', serif;
+}
+
+.pyramid{
+    margin-top: 100px;
+    .pyramid__row{
+        &:before, &:after{
+            display: table;
+            content: " ";
+            
+        }
+        &:after{
+            clear:both;
+        }
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        &:nth-of-type(1){ /* TOP ROW COLOUR */
+            .pyramid__block{
+                // @include linear-gradient(#9CCC65, darken(#FFC107, 0%));
+                background-image: url("../img/philosophy-bg.jpeg"); 
+                
+                border-color: #2E7D32;
+                
+            }
+        }
+
+        &:nth-of-type(2){ /* SECOND ROW COLOUR */
+            .pyramid__block{
+                // @include linear-gradient($secondRowColor, $thirdRowColor);
+                &:nth-of-type(1){
+                    background-image: url("../img/mindfulness-bg.jpeg"); 
+                }
+                &:nth-of-type(2){
+                    background-image: url("../img/principles-bg.jpeg"); 
+                     
+                }
+                
+                border-color: #2E7D32;
+            }
+        }
+
+         &:nth-of-type(3){ /* THIRD ROW COLOUR */
+            .pyramid__block{
+               &:nth-of-type(1){
+                    background-image: url("../img/body-bg.jpeg"); 
+                     
+                    background-size: cover;
+                }
+                &:nth-of-type(2){
+                    background-image: url("../img/social-bg.jpeg"); 
+                     
+                    background-size: cover;
+                }
+                 &:nth-of-type(3){
+                    background-image: url("../img/wealth-bg.jpg"); 
+                     
+                }
+                
+                border-color: #2E7D32;
+            }
+        }
+
+
+    }
+
+
+    .pyramid__block{
+        opacity: 1;
+        height: 100px;
+        width: 100px;
+        text-align: center;
+        background-color: white;
+        padding: 10px;
+        margin-left: 15px;
+        margin-right: 15px;
+        display: block;
+        align-self: center;
+        border: 2px solid black;
+
+        background-size: cover;
+        background-clip: content-box;
+        background-repeat: no-repeat;
+        
+        box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1); 
+        
+        -webkit-font-smoothing: antialiased;
+        backface-visibility: hidden;
+        cursor: pointer;
+        border-radius: 9px;
+        position: relative;
+        // box-shadow: inset 0 0 10px #43A047, inset 0 0 20px darken(#43A047,10%);
+        transition:0.5s cubic-bezier(.25,.8,.25,1);
+
+        h1{
+            background-color: #43A047;
+            color: white;
+            width: 120px;
+            position: absolute;
+            line-height: 40px;
+            left: 0;
+            top: 40px;
+            padding: 0;
+            margin: 0;
+            font-size: 17px;
+            // padding-top: 10px;
+            // padding-bottom: 15px;
+        }
+        &:hover{
+            transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+            box-shadow: 0 2px 40px rgba(0,0,0,0.55), 0 10px 10px rgba(0,0,0,0.22); 
+        }
+    }
+}
+
+
+.booklist__wrap{
+    opacity: 0;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+.booklist__book{
+    width: 150px;
+    height: 100%;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 70px;
+    h3{
+        font-size: 13px;
+    }
+    img{
+        width: 105px;
+        height: 140px;
+    }
+}
