@@ -27,9 +27,9 @@ body{
         &:nth-of-type(1){ /* TOP ROW COLOUR */
             .pyramid__block{
                 // @include linear-gradient(#9CCC65, darken(#FFC107, 0%));
-                background-image: url("../img/philosophy-bg.jpeg"); 
+                // background-image: url("../img/philosophy-bg.jpeg"); 
                 
-                border-color: #2E7D32;
+                // border-color: #2E7D32;
                 
             }
         }
@@ -38,35 +38,35 @@ body{
             .pyramid__block{
                 // @include linear-gradient($secondRowColor, $thirdRowColor);
                 &:nth-of-type(1){
-                    background-image: url("../img/mindfulness-bg.jpeg"); 
+                    // background-image: url("../img/mindfulness-bg.jpeg"); 
                 }
                 &:nth-of-type(2){
-                    background-image: url("../img/principles-bg.jpeg"); 
+                    // background-image: url("../img/principles-bg.jpeg"); 
                      
                 }
                 
-                border-color: #2E7D32;
+                // border-color: #2E7D32;
             }
         }
 
          &:nth-of-type(3){ /* THIRD ROW COLOUR */
             .pyramid__block{
                &:nth-of-type(1){
-                    background-image: url("../img/body-bg.jpeg"); 
+                    // background-image: url("../img/body-bg.jpeg"); 
                      
                     background-size: cover;
                 }
                 &:nth-of-type(2){
-                    background-image: url("../img/social-bg.jpeg"); 
+                    // background-image: url("../img/social-bg.jpeg"); 
                      
                     background-size: cover;
                 }
                  &:nth-of-type(3){
-                    background-image: url("../img/wealth-bg.jpg"); 
+                    // background-image: url("../img/wealth-bg.jpg"); 
                      
                 }
                 
-                border-color: #2E7D32;
+                // border-color: #2E7D32;
             }
         }
 
@@ -76,16 +76,17 @@ body{
 
     .pyramid__block{
         opacity: 1;
-        height: 100px;
-        width: 100px;
+        height: 115px;
+        width: 115px;
         text-align: center;
-        background-color: white;
-        padding: 10px;
+        // background-color: #D4D1D2;
+         @include linear-gradient(45deg, #EC5045, #FFCA33);
+        // padding: 10px;
         margin-left: 15px;
         margin-right: 15px;
         display: block;
         align-self: center;
-        border: 2px solid black;
+        // border: 2px solid #EC5045;
 
         background-size: cover;
         background-clip: content-box;
@@ -102,22 +103,31 @@ body{
         transition:0.5s cubic-bezier(.25,.8,.25,1);
 
         h1{
-            background-color: #43A047;
-            color: white;
-            width: 120px;
+            background-color: #ffffff;
+           
+            color: #EC5045;
+            width: 115px;
             position: absolute;
-            line-height: 40px;
+            line-height: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1), 0px 10px 10px rgba(0,0,0,0.1); 
             left: 0;
-            top: 40px;
+            top: 33px;
             padding: 0;
             margin: 0;
             font-size: 17px;
-            // padding-top: 10px;
-            // padding-bottom: 15px;
         }
-        &:hover{
-            transition: all 0.5s cubic-bezier(.25,.8,.25,1);
-            box-shadow: 0 2px 40px rgba(0,0,0,0.55), 0 10px 10px rgba(0,0,0,0.22); 
+     
+        .close{
+            color: white;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            cursor: pointer;
+            font-size: 40px;
+            display: none;
+            &:hover{
+                color: #EC5045;
+            }
         }
     }
 }
@@ -125,13 +135,15 @@ body{
 
 .booklist__wrap{
     opacity: 0;
-    width: 100%;
+    width: 99.99%;
+    margin-left: 0.005%;
     height: 300px;
     background-color: white;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0px 0px 10px rgba(0,0,0,0.1); 
 }
 .booklist__book{
     width: 150px;
@@ -146,5 +158,20 @@ body{
     img{
         width: 105px;
         height: 140px;
+    }
+}
+
+.selected{
+    @include linear-gradient(135deg, #EC5045, #FFCA33);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3), 0px 0px 10px rgba(0,0,0,0.1);
+    
+    .booklist__book{
+        transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+        &:hover{
+            h3{
+            color: red;
+
+            }
+        }
     }
 }

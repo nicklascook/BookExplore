@@ -45,41 +45,26 @@ body {
       clear: both; }
     .pyramid .pyramid__row:nth-of-type(1) {
       /* TOP ROW COLOUR */ }
-      .pyramid .pyramid__row:nth-of-type(1) .pyramid__block {
-        background-image: url("../img/philosophy-bg.jpeg");
-        border-color: #2E7D32; }
     .pyramid .pyramid__row:nth-of-type(2) {
       /* SECOND ROW COLOUR */ }
-      .pyramid .pyramid__row:nth-of-type(2) .pyramid__block {
-        border-color: #2E7D32; }
-        .pyramid .pyramid__row:nth-of-type(2) .pyramid__block:nth-of-type(1) {
-          background-image: url("../img/mindfulness-bg.jpeg"); }
-        .pyramid .pyramid__row:nth-of-type(2) .pyramid__block:nth-of-type(2) {
-          background-image: url("../img/principles-bg.jpeg"); }
     .pyramid .pyramid__row:nth-of-type(3) {
       /* THIRD ROW COLOUR */ }
-      .pyramid .pyramid__row:nth-of-type(3) .pyramid__block {
-        border-color: #2E7D32; }
-        .pyramid .pyramid__row:nth-of-type(3) .pyramid__block:nth-of-type(1) {
-          background-image: url("../img/body-bg.jpeg");
-          background-size: cover; }
-        .pyramid .pyramid__row:nth-of-type(3) .pyramid__block:nth-of-type(2) {
-          background-image: url("../img/social-bg.jpeg");
-          background-size: cover; }
-        .pyramid .pyramid__row:nth-of-type(3) .pyramid__block:nth-of-type(3) {
-          background-image: url("../img/wealth-bg.jpg"); }
+      .pyramid .pyramid__row:nth-of-type(3) .pyramid__block:nth-of-type(1) {
+        background-size: cover; }
+      .pyramid .pyramid__row:nth-of-type(3) .pyramid__block:nth-of-type(2) {
+        background-size: cover; }
   .pyramid .pyramid__block {
     opacity: 1;
-    height: 100px;
-    width: 100px;
+    height: 115px;
+    width: 115px;
     text-align: center;
-    background-color: white;
-    padding: 10px;
+    background: #ec5045;
+    background: -webkit-linear-gradient(legacy-direction(45deg), #ec5045, #ffca33);
+    background: linear-gradient(45deg, #ec5045, #ffca33);
     margin-left: 15px;
     margin-right: 15px;
     display: block;
     align-self: center;
-    border: 2px solid black;
     background-size: cover;
     background-clip: content-box;
     background-repeat: no-repeat;
@@ -91,29 +76,39 @@ body {
     position: relative;
     transition: 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); }
     .pyramid .pyramid__block h1 {
-      background-color: #43A047;
-      color: white;
-      width: 120px;
+      background-color: #ffffff;
+      color: #EC5045;
+      width: 115px;
       position: absolute;
-      line-height: 40px;
+      line-height: 50px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1), 0px 10px 10px rgba(0, 0, 0, 0.1);
       left: 0;
-      top: 40px;
+      top: 33px;
       padding: 0;
       margin: 0;
       font-size: 17px; }
-    .pyramid .pyramid__block:hover {
-      transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-      box-shadow: 0 2px 40px rgba(0, 0, 0, 0.55), 0 10px 10px rgba(0, 0, 0, 0.22); }
+    .pyramid .pyramid__block .close {
+      color: white;
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      cursor: pointer;
+      font-size: 40px;
+      display: none; }
+      .pyramid .pyramid__block .close:hover {
+        color: #EC5045; }
 
 .booklist__wrap {
   opacity: 0;
-  width: 100%;
+  width: 99.99%;
+  margin-left: 0.005%;
   height: 300px;
   background-color: white;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0px 0px 10px rgba(0, 0, 0, 0.1); }
 
 .booklist__book {
   width: 150px;
@@ -127,3 +122,13 @@ body {
   .booklist__book img {
     width: 105px;
     height: 140px; }
+
+.selected {
+  background: #ec5045;
+  background: -webkit-linear-gradient(legacy-direction(135deg), #ec5045, #ffca33);
+  background: linear-gradient(135deg, #ec5045, #ffca33);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0px 0px 10px rgba(0, 0, 0, 0.1); }
+  .selected .booklist__book {
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    .selected .booklist__book:hover h3 {
+      color: red; }
