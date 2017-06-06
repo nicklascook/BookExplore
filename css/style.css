@@ -33,7 +33,7 @@ body {
   font-family: 'Bitter', serif; }
 
 .pyramid {
-  margin-top: 100px; }
+  margin-top: 10px; }
   .pyramid .pyramid__row {
     display: flex;
     justify-content: center;
@@ -132,3 +132,9 @@ body {
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); }
     .selected .booklist__book:hover h3 {
       color: red; }
+
+.textbox {
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 30%;
+  display: block; }

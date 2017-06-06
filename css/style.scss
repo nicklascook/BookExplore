@@ -10,7 +10,7 @@ body{
 }
 
 .pyramid{
-    margin-top: 100px;
+    margin-top: 10px;
     .pyramid__row{
         &:before, &:after{
             display: table;
@@ -174,4 +174,11 @@ body{
             }
         }
     }
+}
+
+.textbox{
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 30%;
+    display: block;
 }
